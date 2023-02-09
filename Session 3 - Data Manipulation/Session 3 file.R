@@ -39,4 +39,4 @@ data$`Age Today` <- data$`Age Today`/365
 
 summary(data$`Age Today`)
 
-hist(data$`Age Today`)hist(data$`Age Today`)
+hist(data$`Age Today`)
