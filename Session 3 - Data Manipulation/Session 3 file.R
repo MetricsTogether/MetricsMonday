@@ -39,4 +39,15 @@ data$`Age Today` <- data$`Age Today`/365
 
 summary(data$`Age Today`)
 
-hist(data$`Age Today`)hist(data$`Age Today`)
+hist(data$`Age Today`)
+
+
+# Creating a column to see how old each prisoner was when sentenced. 
+data$`Age Sentenced` <- difftime(time1 = data$`Sentence Date`, time2= data$`Date of Birth`,units = "days" )
+data$`Age Sentenced` <-as.numeric(data$`Age Sentenced`)
+data$`Age Sentenced` <-data$`Age Sentenced`/365
+
+#Creating a column to see how old each prisoner was when they were put into custody.
+data$`Age Custody` <- difftime(time1 =data$`Custody Date`,time2 = data$`Date of Birth`,units = "days" )
+data$`Age Custody` <- as.numeric(data$`Age Custody`)
+data$`Age Custody` <- data$`Age Custody`/365
